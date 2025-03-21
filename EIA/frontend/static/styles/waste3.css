@@ -1,0 +1,135 @@
+/* Basic Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(135deg, #baf4bb, #81c784); /* Green gradient background */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    flex-direction: column;
+    text-align: center;
+    color: white;
+    padding: 10px;
+}
+
+.container {
+    width: 90%;
+    max-width: 600px;
+    background-color: white;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    padding: 20px;
+    margin: 20px;
+    text-align: center;
+}
+
+h1 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    color: #4caf50;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+/* Camera Box */
+.camera-box {
+    background-color: #f4f7fa;
+    margin-bottom: 20px;
+    border-radius: 12px;
+    overflow: hidden;
+    position: relative;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+video {
+    width: 100%;
+    height: auto;
+    border-radius: 12px;
+}
+
+canvas {
+    display: none;
+    width: 100%;
+    border-radius: 12px;
+    margin-top: 20px;
+    background-color: #fff;
+}
+
+/* Capture Button */
+#capture {
+    background-color: #4caf50;
+    color: white;
+    padding: 15px 25px;
+    border: none;
+    border-radius: 8px;
+    font-size: 18px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    margin-bottom: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+#capture:hover {
+    background-color: #45a049;
+}
+
+/* Scan Result */
+#result {
+    font-size: 1.2rem;
+    margin-top: 20px;
+    color: #333;
+    font-weight: bold;
+}
+
+#result span {
+    font-weight: bold;
+    color: #e74c3c; /* Default red color */
+}
+
+/* Success message */
+.success {
+    color: #27ae60; /* Green for success */
+}
+
+/* Error handling styles */
+.error {
+    color: #e74c3c; /* Red for error */
+}
+
+/* Footer style */
+footer {
+    background-color: #333;
+    color: white;
+    padding: 15px 0;
+    margin-top: 20px;
+    width: 100%;
+    text-align: center;
+    font-size: 14px;
+}
+
+footer a {
+    color: #81c784;
+    text-decoration: none;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    h1 {
+        font-size: 2rem;
+    }
+
+    #capture {
+        font-size: 16px;
+        padding: 12px 20px;
+    }
+}
+

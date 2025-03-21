@@ -1,0 +1,77 @@
+/* Body Styling */
+body {
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(to right, #000000, #3a3a3a); /* Gradient Background */
+    color: white;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Scanner Container */
+.scanner-container {
+    background: white;
+    color: black;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0px 8px 20px rgba(255, 255, 255, 0.2); /* White shadow */
+    width: 350px;
+    text-align: center;
+    transition: transform 0.3s ease-in-out;
+}
+
+/* Hover Effect */
+.scanner-container:hover {
+    transform: scale(1.05);
+}
+
+/* Scanner Title */
+.scanner-title {
+    font-size: 20px;
+    font-weight: bold;
+    color: #007bff;
+}
+
+/* Camera Preview */
+#video {
+    width: 100%;
+    border: 3px solid #007bff;
+    border-radius: 10px;
+}
+
+/* Capture Button */
+.capture-btn {
+    background-color: #28a745;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background 0.3s;
+}
+
+/* Button Hover Effect */
+.capture-btn:hover {
+    background-color: #218838;
+}
+
+/* Scan Result */
+.scan-result {
+    font-size: 16px;
+    margin-top: 10px;
+}
+
+/* Scan Result - Not Scanned */
+.not-scanned {
+    color: red;
+}
+
+/* Scan Result - Success */
+.scanned {
+    color: green;
+}

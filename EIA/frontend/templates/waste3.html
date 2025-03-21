@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Community Engagement</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"> <!-- Add Font Awesome CDN for icons -->
+    <style>
+        /* General body styling */
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f4f7fa;
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+        }
+
+        header {
+            background-color: #4caf50;
+            color: white;
+            text-align: center;
+            padding: 30px;
+        }
+
+        header h1 {
+            font-size: 36px;
+            margin: 0;
+        }
+
+        /* Main content area */
+        main {
+            padding: 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        /* Section styling */
+        section {
+            background-color: white;
+            margin: 20px 0;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        h2 {
+            color: #333;
+            font-size: 28px;
+        }
+
+        p {
+            font-size: 16px;
+            color: #555;
+        }
+
+        /* Button styling */
+        button {
+            background-color: #4caf50;
+            color: white;
+            font-size: 18px;
+            padding: 12px 24px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+            display: inline-block;
+            margin-top: 20px;
+        }
+
+        button:hover {
+            background-color: #45a049;
+        }
+
+        /* Icon box styling */
+        .icon-box {
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;
+            background-color: white;
+            padding: 15px;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            margin: 15px 0;
+            transition: transform 0.3s ease;
+        }
+
+        .icon-box:hover {
+            transform: translateY(-10px);
+        }
+
+        .icon-box i {
+            font-size: 40px;
+            color: #4caf50;
+            margin-right: 15px;
+        }
+
+        .icon-box .text {
+            font-size: 20px;
+            font-weight: bold;
+            color: #333;
+        }
+
+        .icon-box p {
+            font-size: 16px;
+            color: #555;
+        }
+
+        /* Footer styling */
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 15px 0;
+            position: fixed;
+            width: 100%;
+            bottom: 0;
+        }
+
+        footer p {
+            margin: 0;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .icon-box {
+                flex-direction: column;
+                align-items: center;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Community Engagement</h1>
+</header>
+
+<main>
+    <section>
+        <h2>Welcome to Our Community</h2>
+        <p>Join us in making a difference! Our community is dedicated to improving the environment through recycling and other sustainable initiatives. Together, we can create a cleaner, greener future for everyone.</p>
+    </section>
+
+    <section>
+        <h2>Key Initiatives</h2>
+        <div class="icon-box">
+            <i class="fas fa-recycle"></i>
+            <div>
+                <div class="text">Recycling Awareness</div>
+                <p>We host workshops and events to raise awareness about recycling and its benefits for the environment. Join us to learn more about how to recycle effectively.</p>
+            </div>
+        </div>
+
+        <div class="icon-box">
+            <i class="fas fa-hand-holding-heart"></i>
+            <div>
+                <div class="text">Volunteer Opportunities</div>
+                <p>We rely on volunteers to help with local recycling drives and clean-up events. Your participation helps our community grow and thrive!</p>
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <h2>Upcoming Events</h2>
+        <div class="icon-box">
+            <i class="fas fa-calendar-day"></i>
+            <div>
+                <div class="text">Recycling Drive</div>
+                <p>Join us this Saturday for a recycling drive in your neighborhood. Bring your recyclables and help us reduce waste!</p>
+                <button onclick="window.location.href='/recycling-drive.html'">Learn More</button>
+            </div>
+        </div>
+
+        <div class="icon-box">
+            <i class="fas fa-users"></i>
+            <div>
+                <div class="text">Community Clean-Up</div>
+                <p>Help us clean up local parks and streets this Sunday. Your efforts will make a huge impact on our environment!</p>
+                <button onclick="window.location.href='/community-clean-up.html'">Join the Event</button>
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <h2>Get Involved</h2>
+        <p>There are many ways you can contribute to our community efforts. Whether it's through volunteering, attending events, or simply spreading awareness about recycling, every little bit counts!</p>
+        <button onclick="window.location.href='/index.html'">Volunteer Now</button>
+    </section>
+</main>
+
+<footer>
+    <p>&copy; 2025 Recycling Initiative | All Rights Reserved</p>
+</footer>
+
+</body>
+</html>
