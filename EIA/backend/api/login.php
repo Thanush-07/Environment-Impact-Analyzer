@@ -1,15 +1,8 @@
 <?php
-// include '../connection.php';
-$host = "localhost";
-$user = "root";  // Default XAMPP username
-$pass = "";  // Default XAMPP password (empty)
-$db_name = "eia";  // Database name
+require('../config/conn.php');
 
-$conn = new mysqli($host, $user, $pass, $db_name);
-// Check connection
-if ($conn->connect_error) {
-    die("Connection failed: " . $conn->connect_error);
-}
+error_reporting(E_ALL);
+ini_set('display_errors', 1);
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $email = $_POST['email'];
@@ -18,10 +11,15 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $sql = "SELECT * FROM users WHERE email='$email'";
     $result = $conn->query($sql);
 
+    if (!$result) {
+        die("SQL Error: " . $conn->error);
+    }
+
     if ($result->num_rows > 0) {
         $row = $result->fetch_assoc();
         if (password_verify($password, $row['password'])) {
-            echo "Login successful. Welcome, " . $row['name'];
+            header('Location: ../../frontend/index.html');
+            exit();
         } else {
             echo "Invalid password.";
         }

@@ -1,16 +1,6 @@
 <?php
-// include '../connection.php';
-$host = "localhost";
-$user = "root";  // Default XAMPP username
-$pass = "";  // Default XAMPP password (empty)
-$db_name = "eia";  // Database name
 
-$conn = new mysqli($host, $user, $pass, $db_name);
-
-// Check connection
-if ($conn->connect_error) {
-    die("Connection failed: " . $conn->connect_error);
-}
+require('../config/conn.php');
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $name = $_POST['name'];
     $email = $_POST['email'];
@@ -24,12 +14,14 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         echo "Email already registered. Try logging in.";
     } else {
         $sql = "INSERT INTO users (name, email, password) VALUES ('$name', '$email', '$password')";
-
+    
         if ($conn->query($sql) === TRUE) {
-            echo "Registration successful. <a href='index.html'>Login here</a>";
+            header('Location: ../../frontend/templates/login.html');
+            exit();
         } else {
-            echo "Error: " . $conn->error;
+            die("SQL Error: " . $conn->error);
         }
+        
     }
 }
 $conn->close();
