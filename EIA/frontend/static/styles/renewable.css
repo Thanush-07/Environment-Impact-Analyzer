@@ -1,8 +1,12 @@
 body {
     font-family: Arial, sans-serif;
     text-align: center;
+    background: url('../img/category/innerrenw.jpg') no-repeat center center/cover;
+    margin: 0;
+    padding: 0;
 }
 
+/* Navbar Styling */
 .navbar {
     display: flex;
     justify-content: space-between;
@@ -14,26 +18,20 @@ body {
     top: 0;
     left: 0;
     z-index: 1000;
-    height: 80px;
-    /* Increased height by 2cm */
+    height: 50px;
 }
 
 .navbar .logo {
     font-size: 1.5rem;
     font-weight: bold;
+    color: white;
 }
 
 .navbar ul {
     list-style: none;
-    padding: 0;
-    margin: 0;
     display: flex;
-    gap: 40px;
+    gap: 30px;
     align-items: center;
-}
-
-.navbar ul li {
-    display: inline;
 }
 
 .navbar ul li a {
@@ -55,28 +53,79 @@ body {
     border-radius: 5px;
 }
 
-.navbar button {
-    background: yellow;
-    color: black;
-    padding: 12px 24px;
-    border: none;
-    cursor: pointer;
-    font-size: 1.1rem;
-    border-radius: 5px;
-    transition: background 0.3s;
-    margin-left: -20px;
-    /* Moved login button 2cm to the left */
-}
-
-.navbar button:hover {
-    background: orange;
-}
-
+/* Container Styling */
 .container {
+    background: rgba(255, 255, 255, 0.9);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    width: 40%;
+    margin: 120px auto 20px;
+    text-align: left;
+}
+
+/* Label Styling */
+label {
+    font-weight: bold;
+    display: block;
+    margin: 10px 0 5px;
+}
+
+/* Input & Select Styling */
+select, input {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+/* Submit Button Styling */
+.submit-btn {
+    width: 100%;
+    padding: 12px;
+    margin-top: 15px;
+    border: none;
+    background: #28a745;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background 0.3s ease-in-out;
+}
+
+.submit-btn:hover {
+    background: #218838;
+}
+
+/* Chart Container */
+.chart-container {
+    background: rgba(255, 255, 255, 0.95);
     width: 50%;
-    margin: auto;
+    margin: 20px auto;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
 }
 
 canvas {
-    background: #f9f9f9;
+    width: 100% !important;
+    height: 300px !important;
+    background: white;
+}
+
+/* Tips Styling */
+.tips {
+    margin-top: 15px;
+    font-weight: bold;
+    color: #333;
+}
+
+/* Footer */
+footer {
+    margin-top: 20px;
+    padding: 15px;
+    background: rgba(0, 0, 0, 0.8);
+    color: white;
+    text-align: center;
 }

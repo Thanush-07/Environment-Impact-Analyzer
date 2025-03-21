@@ -1,38 +1,15 @@
+/* Set background image */
 body {
     font-family: Arial, sans-serif;
     text-align: center;
-    padding: 20px;
+    margin: 0;
+    padding: 0;
+    background: url('../img/category/innerfood.jpg') no-repeat center center fixed;
+    background-size: cover;
+    padding-top: 100px; /* Push content below navbar */
 }
 
-table {
-    width: 100%;
-    max-width: 600px;
-    margin: auto;
-    border-collapse: collapse;
-}
-
-th,
-td {
-    padding: 10px;
-    border: 1px solid #ddd;
-    text-align: center;
-}
-
-button {
-    padding: 10px 20px;
-    margin-top: 10px;
-    background: green;
-    color: white;
-    border: none;
-    cursor: pointer;
-}
-
-.result {
-    margin-top: 20px;
-    font-size: 18px;
-    font-weight: bold;
-}
-
+/* Navbar Styles */
 .navbar {
     display: flex;
     justify-content: space-between;
@@ -44,13 +21,13 @@ button {
     top: 0;
     left: 0;
     z-index: 1000;
-    height: 80px;
-    /* Increased height by 2cm */
+    height: 50px;
 }
 
 .navbar .logo {
     font-size: 1.5rem;
     font-weight: bold;
+    color: white;
 }
 
 .navbar ul {
@@ -94,10 +71,59 @@ button {
     font-size: 1.1rem;
     border-radius: 5px;
     transition: background 0.3s;
-    margin-left: -20px;
-    /* Moved login button 2cm to the left */
 }
 
 .navbar button:hover {
     background: orange;
+}
+
+/* Container Styles */
+.container {
+    background: rgba(255, 255, 255, 0.9);
+    max-width: 600px;
+    margin: auto;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Table Styles */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: auto;
+}
+
+th, td {
+    padding: 10px;
+    border: 1px solid #ddd;
+    text-align: center;
+}
+
+th {
+    background-color: #28a745;
+    color: white;
+}
+
+/* Button */
+button {
+    padding: 10px 20px;
+    margin-top: 10px;
+    background: green;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+button:hover {
+    background: darkgreen;
+}
+
+/* Result Styling */
+.result {
+    margin-top: 20px;
+    font-size: 18px;
+    font-weight: bold;
+    color: red;
 }

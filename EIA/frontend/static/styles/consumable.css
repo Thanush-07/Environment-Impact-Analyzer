@@ -1,6 +1,8 @@
 body {
   font-family: Arial, sans-serif;
-  background-color: #f4f4f4;
+  background-image: url('../img/category/innerconsum.jpg'); 
+  background-size: cover;
+  background-position: center;
   text-align: center;
   padding: 20px;
   margin: 0;
@@ -31,10 +33,10 @@ body {
   padding: 0;
   margin: 0;
   display: flex;
-  gap: 30px; /* Adjusted spacing */
+  gap: 30px;
   align-items: center;
   margin-left: auto;
-  margin-right: 20px ; /* Moves UL to the right */
+  margin-right: 20px;
 }
 
 .navbar ul li {
@@ -54,40 +56,15 @@ body {
   border-radius: 5px;
 }
 
-.navbar ul li a.active {
-  background: yellow;
-  color: black;
-  border-radius: 5px;
-}
-
-/* Login Button */
-.navbar button {
-  background: yellow;
-  color: black;
-  padding: 12px 20px; /* Adjusted padding */
-  border: none;
-  cursor: pointer;
-  font-size: 1rem;
-  border-radius: 5px;
-  transition: background 0.3s;
-}
-
-.navbar button:hover {
-  background: orange;
-}
-
-/* Carbon Emission Calculator Container */
 .container {
   background: white;
-  padding: 20px;
+  padding: 25px;
   border-radius: 10px;
   box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
-  max-width: 400px;
-  position: absolute;
-  bottom: 10px;
-  top: 42%;
-  left: 39%;
-  transform: translateX(-50% , -50%);
+  max-width: 500px;
+  position: relative;
+  top: 100px;
+  margin: auto;
 }
 
 label {
@@ -96,7 +73,7 @@ label {
   margin-top: 10px;
 }
 
-select, input, button {
+select, input {
   width: 100%;
   padding: 10px;
   margin-top: 5px;
@@ -105,31 +82,34 @@ select, input, button {
 }
 
 button {
-  background: #28a745;
-  color: white;
+  width: 100%;
+  padding: 12px;
+  border: none;
   cursor: pointer;
   font-size: 16px;
+  border-radius: 5px;
   margin-top: 15px;
 }
 
-button:hover {
-  background: #218838;
+.next-btn {
+  background: #007bff;
+  color: white;
 }
 
-.result {
-  margin-top: 20px;
-  font-weight: bold;
-  color: #333;
+.prev-btn {
+  background: #6c757d;
+  color: white;
 }
 
-.navbar .login-btn {
-  background: yellow;  /* Same as Home button */
-  color: black;
-  padding: 12px 12px;
-  border: none;
-  cursor: pointer;
-  font-size: 1.1rem;
-  border-radius: 5px;
-  transition: background 0.3s;
-  margin-left: -20px;
+.reset-btn {
+  background: red;
+  color: white;
+}
+
+footer {
+  margin-top: 40px;
+  padding: 15px;
+  background: rgba(0, 0, 0, 0.8);
+  color: white;
+  text-align: center;
 }
