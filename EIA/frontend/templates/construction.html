@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Construction & Building Materials CO₂ Emission Calculator</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link rel="shortcut icon" href="../static/img/home/icon.png type="image/x-icon">
+    <link rel="stylesheet" href="../static/styles/construction.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="logo">EIA</div>
+        <ul>
+            <li><a href="../index.html" class="active">Home</a></li>
+            <li><a href="#">Contact</a></li>
+            <li><a href="../templates/about.html">About</a></li> 
+            <li><a href="../templates/login.html"><button>Login</button></a></li>///
+            
+        </ul>
+    <div class="container">
+        <h2>🏗️ CO₂ Emissions for Construction & Building Materials</h2>
+        <canvas id="emissionChart"></canvas>
+
+        <h3>🔢 Input CO₂ Emission Values (kg CO₂/kg)</h3>
+        <div id="inputContainer">
+            <label>Cement & Concrete: <input type="number" id="cement" value="0.9"></label>
+            <label>Bricks & Blocks: <input type="number" id="bricks" value="0.3"></label>
+            <label>Steel & Metals: <input type="number" id="steel" value="2.0"></label>
+            <label>Wood & Timber: <input type="number" id="wood" value="-1.0"></label>
+            <label>Glass & Glazing: <input type="number" id="glass" value="1.2"></label>
+            <label>Insulation Materials: <input type="number" id="insulation" value="0.5"></label>
+            <label>Roofing Materials: <input type="number" id="roofing" value="1.0"></label>
+            <label>Flooring & Finishing: <input type="number" id="flooring" value="0.8"></label>
+            <label>Plastics & Composites: <input type="number" id="plastics" value="2.5"></label>
+            <label>Adhesives & Paints: <input type="number" id="paints" value="1.5"></label>
+        </div>
+        
+        <button onclick="updateChart()">Update Chart 📊</button>
+    </div>
+
+    <script src="../static/scripts/construction.js"></script>
+</body>
+</html>

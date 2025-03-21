@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carbon Emission Calculator</title>
+    <link rel="shortcut icon" href="../static/img/home/icon.png" type="image/x-icon">
+   <link rel="stylesheet" href="../static/styles/consumable.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="logo">EIA</div>
+        <ul>
+            <li><a href="../index.html" class="active">Home</a></li>
+            <li><a href="#">Contact</a></li>
+            <li><a href="../templates/about.html">About</a></li> 
+            <li><a href="../templates/login.html"><button>Login</button></a></li>
+           ///
+            
+        </ul>
+    </nav>
+
+    <div class="container">
+        <h2>Carbon Emission Calculator</h2>
+        
+        <label for="material">Select Material Type:</label>
+        <select id="material">
+            <option value="Plastic Products">Plastic Products</option>
+            <option value="Paper Products">Paper Products</option>
+            <option value="Biodegradable Packaging">Biodegradable Packaging</option>
+            <option value="Electronics Packaging">Electronics Packaging</option>
+            <option value="Single-Use Products">Single-Use Products</option>
+            <option value="Glass & Metal Packaging">Glass & Metal Packaging</option>
+            <option value="Sustainable Packaging">Sustainable Packaging</option>
+        </select>
+
+        <label for="weight">Enter Weight (kg):</label>
+        <input type="number" id="weight" placeholder="Enter weight in kg">
+
+        <button onclick="calculate()">Calculate</button>
+
+        <div class="result" id="result"></div>
+    </div>
+<script src="../static/scripts/consumable.js"></script>
+</body>
+</html>

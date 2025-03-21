@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Electronics Carbon Emission Calculator</title>
+    <link rel="shortcut icon" href="../static/img/home/icon.png" type="image/x-icon">
+    <link rel="stylesheet" href="../static/styles/electronics.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="logo">EIA</div>
+        <ul>
+            <li><a href="../index.html" class="active">Home</a></li>
+            <li><a href="#">Contact</a></li>
+            <li><a href="../templates/about.html">About</a></li> 
+            <li><a href="../templates/login.html"><button>Login</button></a></li>
+           ///
+            
+        </ul>
+    </nav>
+
+    <div class="container">
+        <h2>Electronics Carbon Emission Calculator</h2>
+        <label for="productType">Select Product:</label>
+        <select id="productType">
+            <option value="smartphone">Smartphone</option>
+            <option value="laptop">Laptop</option>
+            <option value="tablet">Tablet</option>
+            <option value="smartwatch">Smartwatch</option>
+            <option value="gaming_console">Gaming Console</option>
+            <option value="battery">Rechargeable Battery</option>
+            <option value="power_bank">Power Bank</option>
+            <option value="solar_panel">Solar Panel</option>
+            <option value="refrigerator">Refrigerator</option>
+            <option value="washing_machine">Washing Machine</option>
+            <option value="smart_tv">Smart TV</option>
+            <option value="smart_assistant">Smart Assistant</option>
+            <option value="desktop_computer">Desktop Computer</option>
+            <option value="router_modem">Router/Modem</option>
+            <option value="data_center">Data Center</option>
+            <option value="medical_device">Medical Device</option>
+            <option value="ai_robot">AI Robot</option>
+            <option value="electric_vehicle">Electric Vehicle</option>
+        </select>
+
+        <label for="weight">Enter Weight (kg):</label>
+        <input type="number" id="weight" placeholder="Enter weight in kg">
+
+        <button id="calculateBtn">Calculate Emission</button>
+
+        <div id="result"></div>
+    </div>
+
+    <script src="../static/scripts/electronics.js"></script>
+
+</body>
+</html>

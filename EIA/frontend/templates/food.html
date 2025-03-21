@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="../static/img/home/icon.png" type="image/x-icon">
+    <title>Food & Agriculture Carbon Calculator</title>
+    <link rel="stylesheet" href="../static/styles/food.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="logo">EIA</div>
+        <ul>
+            <li><a href="../index.html" class="active">Home</a></li>
+            <li><a href="#">Contact</a></li>
+            <li><a href="../templates/about.html">About</a></li> 
+            <li><a href="../templates/login.html"><button>Login</button></a></li>
+            //
+        </ul>
+    <h2>Food & Agriculture Carbon Footprint Calculator 🌱</h2>
+    <p>Enter the quantity (kg) of food items you consume per week:</p>
+    
+    <table>
+        <tr>
+            <th>Food Item</th>
+            <th>Quantity (kg)</th>
+        </tr>
+        <tr>
+            <td>Beef 🥩 (27 kg CO₂/kg)</td>
+            <td><input type="number" id="beef" min="0" step="0.1"></td>
+        </tr>
+        <tr>
+            <td>Chicken 🍗 (6 kg CO₂/kg)</td>
+            <td><input type="number" id="chicken" min="0" step="0.1"></td>
+        </tr>
+        <tr>
+            <td>Milk 🥛 (3.2 kg CO₂/kg)</td>
+            <td><input type="number" id="milk" min="0" step="0.1"></td>
+        </tr>
+        <tr>
+            <td>Tofu 🌱 (3.2 kg CO₂/kg)</td>
+            <td><input type="number" id="tofu" min="0" step="0.1"></td>
+        </tr>
+        <tr>
+            <td>Coffee ☕ (29 kg CO₂/kg)</td>
+            <td><input type="number" id="coffee" min="0" step="0.1"></td>
+        </tr>
+    </table>
+    
+    <button onclick="calculateCarbon()">Calculate Carbon Footprint</button>
+    <p class="result" id="result"></p>
+    <p id="sustainability-tips"></p>
+    
+    <script src="../static/scripts/food.js"></script>
+</body>
+</html>

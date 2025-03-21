@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Renewable Energy & Sustainability Products</title>
+    <link rel="shortcut icon" href="../static/img/home/icon.png" type="image/x-icon">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link rel="stylesheet" href="../static/styles/renewable.css">
+</head>
+<body>
+       <nav class="navbar">
+        <div class="logo">EIA</div>
+        <ul>
+            <li><a href="../index.html" class="active">Home</a></li>
+            <li><a href="#">Contact</a></li>
+            <li><a href="../templates/about.html">About</a></li> 
+            <li><a href="../templates/login.html"><button>Login</button></a></li>
+           ///
+            
+        </ul>
+    <h2>Renewable Energy & Sustainability Products - Emission Comparison</h2>
+    
+    <div class="container">
+        <label for="product">Select Product Category:</label>
+        <select id="product">
+            <option value="Solar Energy">Solar Energy</option>
+            <option value="Wind Energy">Wind Energy</option>
+            <option value="Hydropower">Hydropower</option>
+            <option value="Battery Storage">Battery Storage</option>
+            <option value="EV Transportation">EV Transportation</option>
+        </select>
+        <br><br>
+        <label for="emission">Enter Carbon Emission (kg CO₂/kWh):</label>
+        <input type="number" id="emission" step="0.1" placeholder="Enter Value">
+        <button onclick="addData()">Add Data</button>
+    </div>
+
+    <canvas id="emissionChart"></canvas>
+<script src="../static/scripts/renewable.js"></script>
+</body>
+</html>

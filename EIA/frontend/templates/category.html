@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Categories</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="shortcut icon" href="../static/img/home/icon.png" type="image/x-icon">
+    <link rel="stylesheet" href="../static/styles/category.css">
+</head>
+<body class="bg-white text-gray-800">
+    <nav class="navbar">
+        <div class="logo">EIT</div>
+        <ul>
+            <li><a href="../index.html" class="active">Home</a></li>
+            <li><a href="#">Contact</a></li>
+            <li><a href="..about.html">About</a></li>
+            <li><a href="..login.html"><button>Login</button></a></li>
+        </ul>
+    </nav>
+    
+    <div class="content">
+        <div class="max-w-6xl mx-auto text-center">
+            <h2 class="title">Choose the type of category</h2>
+            <h3 class="text-md font-medium mb-4">Explore popular local shops and businesses by category</h3>
+            <div class="category-container">
+                <div class="category-row">
+                    <div class="category-card" data-link="../templates/consumable.html" onclick="navigateToPage(event)">
+                        <img src="../static/img/category/consumergood.png" alt="Consumer">
+                        <div class="category-title">Consumer Goods & Packaging</div>
+                    </div>
+                    <div class="category-card" data-link="../templates/electronics.html" onclick="navigateToPage(event)">
+                        <img src="../static/img/category/Electronics & Technology.png" alt="Electronics">
+                        <div class="category-title">Electronics & Technology</div>
+                    </div>
+                    <div class="category-card" data-link="../templates/clothing.html" onclick="navigateToPage(event)">
+                        <img src="../static/img/category/clothes.png" alt="Clothing">
+                        <div class="category-title">Clothing & Textiles</div>
+                    </div>
+                    <div class="category-card" data-link="../templates/food.html" onclick="navigateToPage(event)">
+                        <img src="../static/img/category/Food & Agriculture.png" alt="Food">
+                        <div class="category-title">Food & Agriculture</div>
+                    </div>
+                </div>
+                <div class="category-row">
+                    <div class="category-card" data-link="../templates/automobile.html" onclick="navigateToPage(event)">
+                        <img src="../static/img/category/Automobiles & Transportation.png" alt="Transport">
+                        <div class="category-title">Automobiles & Transportation</div>
+                    </div>
+                    <div class="category-card" data-link="../templates/construction.html" onclick="navigateToPage(event)">
+                        <img src="../static/img/category/Construction & Building Materials.png" alt="Construction">
+                        <div class="category-title">Construction & Building Materials</div>
+                    </div>
+                    <div class="category-card" data-link="../templates/chemical.html" onclick="navigateToPage(event)">
+                        <img src="../static/img/category/Chemicals & Industrial Products.png" alt="Chemicals">
+                        <div class="category-title">Chemicals & Industrial Products</div>
+                    </div>
+                    <div class="category-card" data-link="../templates/renewable.html" onclick="navigateToPage(event)">
+                        <img src="../static/img/category/Renewable Energy & Sustainability Products.png" alt="Renewable Energy">
+                        <div class="category-title">Renewable Energy & Sustainability Products</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="../static/scripts/category.js"></script>
+   
+    
+    <footer>
+        <p>&copy; 2025 AI-Driven Environmental Impact Assessment Tracker | Developed by Tapy</p>
+    </footer>
+</body>
+</html>

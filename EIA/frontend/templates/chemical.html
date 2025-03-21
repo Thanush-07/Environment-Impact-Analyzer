@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chemicals & Industrial Products - Carbon Emission</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link rel="stylesheet" href="../static/styles/chemical.css">
+    <link rel="shortcut icon" href="../static/img/home/icon.png" type="image/x-icon">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="logo">EIA</div>
+        <ul>
+            <li><a href="../index.html" class="active">Home</a></li>
+            <li><a href="#">Contact</a></li>
+            <li><a href="../templates/about.html">About</a></li> 
+            <li><a href="../templates/login.html"><button>Login</button></a></li>
+            //
+            
+        </ul>
+    </nav>
+        
+    <div class="container">
+        <h1>Chemicals & Industrial Products - Carbon Emission Calculator</h1>
+        
+        <div class="input-section">
+            <label for="product">Select Product:</label>
+            <select id="product">
+                <option value="Petrochemicals & Plastics">Petrochemicals & Plastics</option>
+                <option value="Industrial Gases">Industrial Gases</option>
+                <option value="Fertilizers & Agrochemicals">Fertilizers & Agrochemicals</option>
+                <option value="Pharmaceuticals & Biochemicals">Pharmaceuticals & Biochemicals</option>
+                <option value="Paints, Coatings & Adhesives">Paints, Coatings & Adhesives</option>
+                <option value="Textile Chemicals & Dyes">Textile Chemicals & Dyes</option>
+                <option value="Metal Treatment & Electroplating Chemicals">Metal Treatment & Electroplating Chemicals</option>
+                <option value="Cleaning & Detergent Chemicals">Cleaning & Detergent Chemicals</option>
+                <option value="Explosives & Propellants">Explosives & Propellants</option>
+                <option value="Lubricants & Industrial Oils">Lubricants & Industrial Oils</option>
+            </select>
+            <br>
+
+            <label for="emissionValue">Enter CO₂ Emissions (kg CO₂/kg):</label>
+            <input type="number" id="emissionValue" placeholder="Enter value">
+
+            <button onclick="addData()">Add Data</button>
+        </div>
+
+        <canvas id="emissionChart"></canvas>
+    </div>
+
+    <script src="../static/scripts/chemical.js"></script>
+</body>
+</html>

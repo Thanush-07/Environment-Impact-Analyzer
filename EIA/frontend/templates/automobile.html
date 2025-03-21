@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Transport Carbon Footprint Calculator</title>
+    <link rel="shortcut icon" href="../static/img/home/icon.png" type="image/x-icon">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link rel="stylesheet" href="../static/styles/automobiles.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="logo">EIA</div>
+        <ul>
+            <li><a href="../index.html" class="active">Home</a></li>
+            <li><a href="#">Contact</a></li>
+            <li><a href="../templates/about.html">About</a></li> 
+            <li><a href="../templates/login.html"><button>Login</button></a></li>
+           ///
+            
+        </ul>
+    <h2>🚗 Transport Carbon Footprint Calculator 🌍</h2>
+    <div class="container">
+        <label for="transport">Select Transport Type:</label>
+        <select id="transport">
+            <option value="0.12">Small Petrol Car (0.12 kg CO₂/km)</option>
+            <option value="0.20">Large Petrol Car (0.20 kg CO₂/km)</option>
+            <option value="0.15">Diesel Car (0.15 kg CO₂/km)</option>
+            <option value="0.05">Electric Car (0.05 kg CO₂/km)</option>
+            <option value="0.08">Motorbike (0.08 kg CO₂/km)</option>
+            <option value="0.07">Hybrid Car (0.07 kg CO₂/km)</option>
+            <option value="0.70">Diesel Truck (0.70 kg CO₂/km)</option>
+            <option value="0.30">Electric Truck (0.30 kg CO₂/km)</option>
+            <option value="0.50">City Bus (0.50 kg CO₂/km)</option>
+            <option value="0.20">Electric Bus (0.20 kg CO₂/km)</option>
+            <option value="0.06">Diesel Train (0.06 kg CO₂/km)</option>
+            <option value="0.02">Electric Train (0.02 kg CO₂/km)</option>
+            <option value="0.01">Metro/Subway (0.01 kg CO₂/km)</option>
+            <option value="0.25">Short-Haul Flight (0.25 kg CO₂/km)</option>
+            <option value="0.15">Long-Haul Flight (0.15 kg CO₂/km)</option>
+            <option value="1.5">Private Jet (1.5 kg CO₂/km)</option>
+            <option value="0.01">Cargo Ship (0.01 kg CO₂/km per tonne)</option>
+            <option value="0.25">Cruise Ship (0.25 kg CO₂/km per passenger)</option>
+        </select>
+
+        <label for="distance">Enter Distance (km):</label>
+        <input type="number" id="distance" placeholder="Enter travel distance" min="1">
+
+        <button onclick="calculateEmissions()">Calculate Emissions</button>
+
+        <div id="result"></div>
+
+        <canvas id="emissionChart"></canvas>
+    </div>
+
+    <script src="../static/scripts/automobile.js"></script>
+
+</body>
+</html>
