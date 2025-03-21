@@ -5,7 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Carbon Emission Calculator</title>
     <link rel="shortcut icon" href="../static/img/home/icon.png" type="image/x-icon">
-   <link rel="stylesheet" href="../static/styles/consumable.css">
+    <link rel="stylesheet" href="../static/styles/consumable.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </head>
 <body>
     <nav class="navbar">
@@ -14,34 +15,50 @@
             <li><a href="../index.html" class="active">Home</a></li>
             <li><a href="#">Contact</a></li>
             <li><a href="../templates/about.html">About</a></li> 
-            <li><a href="../templates/login.html"><button>Login</button></a></li>
-           ///
-            
+            <li><a href="../templates/login.html"><button class="btn">Login</button></a></li>
+            //
         </ul>
     </nav>
 
     <div class="container">
         <h2>Carbon Emission Calculator</h2>
-        
-        <label for="material">Select Material Type:</label>
-        <select id="material">
-            <option value="Plastic Products">Plastic Products</option>
-            <option value="Paper Products">Paper Products</option>
-            <option value="Biodegradable Packaging">Biodegradable Packaging</option>
-            <option value="Electronics Packaging">Electronics Packaging</option>
-            <option value="Single-Use Products">Single-Use Products</option>
-            <option value="Glass & Metal Packaging">Glass & Metal Packaging</option>
-            <option value="Sustainable Packaging">Sustainable Packaging</option>
-        </select>
 
-        <label for="weight">Enter Weight (kg):</label>
-        <input type="number" id="weight" placeholder="Enter weight in kg">
+        <!-- Step 1: Select Material -->
+        <div id="step1">
+            <label for="material">Select Material Type:</label>
+            <select id="material">
+                <option value="Plastic Products">Plastic Products</option>
+                <option value="Paper Products">Paper Products</option>
+                <option value="Biodegradable Packaging">Biodegradable Packaging</option>
+                <option value="Electronics Packaging">Electronics Packaging</option>
+                <option value="Single-Use Products">Single-Use Products</option>
+                <option value="Glass & Metal Packaging">Glass & Metal Packaging</option>
+                <option value="Sustainable Packaging">Sustainable Packaging</option>
+            </select>
+            <button class="next-btn" onclick="nextStep(2)">Next</button>
+        </div>
 
-        <button onclick="calculate()">Calculate</button>
+        <!-- Step 2: Enter Weight -->
+        <div id="step2" style="display: none;">
+            <label for="weight">Enter Weight (kg):</label>
+            <input type="number" id="weight" placeholder="Enter weight in kg">
+            <button class="prev-btn" onclick="prevStep(1)">Back</button>
+            <button class="next-btn" onclick="calculate()">Calculate</button>
+        </div>
 
-        <div class="result" id="result"></div>
+        <!-- Results -->
+        <div id="results" style="display: none;">
+            <div class="result" id="result"></div>
+            <canvas id="emissionChart"></canvas>
+            <div class="tips" id="tips"></div>
+            <button class="reset-btn" onclick="resetForm()">Start Over</button>
+        </div>
     </div>
-    
-<script src="../static/scripts/consumable.js"></script>
+
+    <footer>
+        <p>&copy; 2025 AI-Driven Environmental Impact Analyzer | Developed by TRPY</p>
+    </footer>
+
+    <script src="../static/scripts/consumable.js"></script>
 </body>
 </html>

@@ -9,19 +9,20 @@
     <link rel="stylesheet" href="../static/styles/renewable.css">
 </head>
 <body>
-       <nav class="navbar">
+    <nav class="navbar">
         <div class="logo">EIA</div>
         <ul>
             <li><a href="../index.html" class="active">Home</a></li>
             <li><a href="#">Contact</a></li>
             <li><a href="../templates/about.html">About</a></li> 
-            <li><a href="../templates/login.html"><button>Login</button></a></li>
-           ///
-            
+            <li><a href="../templates/login.html"><button class="login-btn">Login</button></a></li>
+            //
         </ul>
-    <h2>Renewable Energy & Sustainability Products - Emission Comparison</h2>
-    
+    </nav>
+
     <div class="container">
+        <h2>Renewable Energy & Sustainability Products - Emission Comparison</h2>
+
         <label for="product">Select Product Category:</label>
         <select id="product">
             <option value="Solar Energy">Solar Energy</option>
@@ -30,16 +31,23 @@
             <option value="Battery Storage">Battery Storage</option>
             <option value="EV Transportation">EV Transportation</option>
         </select>
-        <br><br>
+
         <label for="emission">Enter Carbon Emission (kg CO₂/kWh):</label>
         <input type="number" id="emission" step="0.1" placeholder="Enter Value">
-        <button onclick="addData()">Add Data</button>
+
+        <button class="submit-btn" onclick="addData()">Submit</button>
+
+        <div class="tips" id="tips"></div>
     </div>
+
+    <div class="chart-container">
+        <canvas id="emissionChart"></canvas>
+    </div>
+
     <footer>
         <p>&copy; 2025 AI-Driven Environmental Impact Analyzer | Developed by TRPY</p>
     </footer>
 
-    <canvas id="emissionChart"></canvas>
-<script src="../static/scripts/renewable.js"></script>
+    <script src="../static/scripts/renewable.js"></script>
 </body>
 </html>
