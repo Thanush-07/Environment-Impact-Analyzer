@@ -7,7 +7,17 @@
     box-sizing: border-box;
     text-decoration: none;
 }
+body{
+    /* Home Section Styling */
+.home {
+    display: flex;
+    height: 100vh;
+    background: url(/waste.jpg2.jpg) no-repeat center center;
+    background-size: cover;
+    color: #fff;
+}
 
+}
 
 html{
     scroll-behavior: smooth;
@@ -140,8 +150,9 @@ section .title::after{
   }
 /* menu btn styling */
 #con{
-    padding: 200px;
-    padding-left: 4px;
+    padding: 150px;
+    padding-left: 8px;
+    padding-right: 8px;
 
 
 }

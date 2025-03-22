@@ -1,7 +1,7 @@
 body {
     margin: 0;
     font-family: 'Poppins', sans-serif;
-    color: white;
+    color: rgb(240, 231, 231);
     text-align: center;
     background-color: black;
   }
@@ -138,7 +138,7 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    background: #f0f0f0;
+    background: #e9e6e6;
   }
   .image-container img {
     width: 100%;
