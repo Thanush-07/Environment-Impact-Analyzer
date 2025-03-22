@@ -30,7 +30,8 @@ const emissionChart = new Chart(ctx, {
         responsive: true,
         scales: {
             y: {
-                beginAtZero: true
+                beginAtZero: true,
+                suggestedMax: 15
             }
         }
     }
@@ -45,7 +46,7 @@ function addData() {
         emissionData[product] = emissionValue;
         updateChart();
     } else {
-        alert("Please enter a valid number for CO₂ emissions.");
+        alert("Please enter a valid number.");
     }
 }
 

@@ -9,6 +9,7 @@
     <link rel="shortcut icon" href="../static/img/home/icon.png" type="image/x-icon">
 </head>
 <body>
+
     <nav class="navbar">
         <div class="logo">EIA</div>
         <ul>
@@ -17,10 +18,9 @@
             <li><a href="../templates/about.html">About</a></li> 
             <li><a href="../templates/login.html"><button>Login</button></a></li>
             //
-            
         </ul>
     </nav>
-        
+
     <div class="container">
         <h1>Chemicals & Industrial Products - Carbon Emission Calculator</h1>
         
@@ -47,11 +47,17 @@
         </div>
 
         <canvas id="emissionChart"></canvas>
+
+        <div id="tipContainer" class="tip-box">
+            <p>Enter an emission value to get sustainability tips.</p>
+        </div>
     </div>
+
     <footer>
         <p>&copy; 2025 AI-Driven Environmental Impact Analyzer | Developed by TRPY</p>
     </footer>
 
     <script src="../static/scripts/chemical.js"></script>
+
 </body>
 </html>

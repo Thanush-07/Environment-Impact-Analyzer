@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Construction & Building Materials CO₂ Emission Calculator</title>
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-    <link rel="shortcut icon" href="../static/img/home/icon.png type="image/x-icon">
+    <link rel="shortcut icon" href="../static/img/home/icon.png" type="image/x-icon">
     <link rel="stylesheet" href="../static/styles/construction.css">
 </head>
 <body>
@@ -15,15 +15,17 @@
             <li><a href="../index.html" class="active">Home</a></li>
             <li><a href="#">Contact</a></li>
             <li><a href="../templates/about.html">About</a></li> 
-            <li><a href="../templates/login.html"><button>Login</button></a></li>///
-            
+            <li><a href="../templates/login.html"><button>Login</button></a></li>
+            //
         </ul>
+    </nav>
+
     <div class="container">
         <h2>🏗️ CO₂ Emissions for Construction & Building Materials</h2>
-        <canvas id="emissionChart"></canvas>
 
-        <h3>🔢 Input CO₂ Emission Values (kg CO₂/kg)</h3>
+        <!-- Input fields moved above the graph -->
         <div id="inputContainer">
+            <h3>🔢 Input CO₂ Emission Values (kg CO₂/kg)</h3>
             <label>Cement & Concrete: <input type="number" id="cement" value="0.9"></label>
             <label>Bricks & Blocks: <input type="number" id="bricks" value="0.3"></label>
             <label>Steel & Metals: <input type="number" id="steel" value="2.0"></label>
@@ -35,9 +37,15 @@
             <label>Plastics & Composites: <input type="number" id="plastics" value="2.5"></label>
             <label>Adhesives & Paints: <input type="number" id="paints" value="1.5"></label>
         </div>
-        
+
         <button onclick="updateChart()">Update Chart 📊</button>
+
+        <!-- Graph section -->
+        <canvas id="emissionChart"></canvas>
+
+        <!-- Footer remains at the bottom -->
     </div>
+
     <footer>
         <p>&copy; 2025 AI-Driven Environmental Impact Analyzer | Developed by TRPY</p>
     </footer>
