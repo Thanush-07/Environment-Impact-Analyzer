@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact Form</title>
+    <link rel="stylesheet" href="../static/styles/contact.css" />
+    <script
+      src="https://kit.fontawesome.com/64d58efce2.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <div class="container">
+      <span class="big-circle"></span>
+      <img src="img/shape.png" class="square" alt="Decorative Shape" />
+      
+      <div class="form">
+        <div class="contact-info">
+          <h3 class="title">Let's Get in Touch</h3>
+          <p class="text">
+            Have any questions or need assistance? Our team is here to help! 
+            Reach out to us, and we’ll get back to you as soon as possible.
+          </p>
+
+          <div class="info">
+            <div class="information">
+              <img src="../static/img/category/location.png" class="icon" alt="Location Icon" />
+              <p>1234,street,Theni </p>
+            </div>
+            <div class="information">
+              <img src="../static/img/category/email.png" class="icon" alt="Email Icon" />
+              <p>supportrecycle@gmail.com</p>
+            </div>
+            <div class="information">
+              <img src="../static/img/category/phone.png" class="icon" alt="Phone Icon" />
+              <p>+91 987654123</p>
+            </div>
+          </div>
+
+          <div class="social-media">
+            <p>Follow us on:</p>
+            <div class="social-icons">
+              <a href="#"><i class="fab fa-facebook-f"></i></a>
+              <a href="#"><i class="fab fa-twitter"></i></a>
+              <a href="#"><i class="fab fa-instagram"></i></a>
+              <a href="#"><i class="fab fa-linkedin-in"></i></a>
+            </div>
+          </div>
+        </div>
+
+        <div class="contact-form">
+          <span class="circle one"></span>
+          <span class="circle two"></span>
+
+          <form action="index.html" autocomplete="off">
+            <h3 class="title">Contact Us</h3>
+            <div class="input-container">
+              <input type="text" name="name" class="input" required />
+              <label>Full Name</label>
+              <span>Full Name</span>
+            </div>
+            <div class="input-container">
+              <input type="email" name="email" class="input" required />
+              <label>Email</label>
+              <span>Email</span>
+            </div>
+            <div class="input-container">
+              <input type="tel" name="phone" class="input" required />
+              <label>Phone</label>
+              <span>Phone</span>
+            </div>
+            <div class="input-container textarea">
+              <textarea name="message" class="input" required></textarea>
+              <label>Message</label>
+              <span>Message</span>
+            </div>
+            <input type="submit" value="Send" class="btn" />
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <script src="../static/scripts/contact.js"></script>
+  </body>
+</html>

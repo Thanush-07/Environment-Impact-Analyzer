@@ -3,54 +3,59 @@ const canvas = document.getElementById("canvas");
 const captureButton = document.getElementById("capture");
 const resultText = document.getElementById("result").querySelector("span");
 
-// Load TensorFlow.js model
-let model;
-(async function() {
-    model = await mobilenet.load();
-    console.log("Model loaded successfully!");
-})();
-
 // Access the camera
 navigator.mediaDevices.getUserMedia({ video: true })
     .then(stream => {
         video.srcObject = stream;
     })
-    .catch(error => console.error("Camera access denied:", error));
+    .catch(error => {
+        console.error("❌ Camera access denied:", error);
+        resultText.innerText = "❌ Camera access denied!";
+        resultText.style.color = "red";
+    });
 
 // Capture image and classify waste
-captureButton.addEventListener("click", async () => {
+captureButton.addEventListener("click", () => {
     const context = canvas.getContext("2d");
     canvas.width = video.videoWidth;
     canvas.height = video.videoHeight;
     context.drawImage(video, 0, 0, canvas.width, canvas.height);
 
-    // Convert canvas image to Tensor
-    const imageTensor = tf.browser.fromPixels(canvas).resizeNearestNeighbor([224, 224]).toFloat().expandDims();
+    // Get pixel data to analyze colors (simple color detection)
+    const imageData = context.getImageData(0, 0, canvas.width, canvas.height);
+    const pixels = imageData.data;
 
-    // Predict using model
-    if (model) {
-        const predictions = await model.classify(imageTensor);
-        console.log(predictions);
-        
-        // Define categories based on prediction labels
-        const biodegradableKeywords = ["leaf", "food", "fruit", "paper"];
-        const nonBiodegradableKeywords = ["plastic", "metal", "glass", "electronics"];
+    let redCount = 0, greenCount = 0, blueCount = 0, skinToneCount = 0;
 
-        let classification = "Unknown";
-        for (let pred of predictions) {
-            if (biodegradableKeywords.some(keyword => pred.className.includes(keyword))) {
-                classification = "Biodegradable";
-                break;
-            } else if (nonBiodegradableKeywords.some(keyword => pred.className.includes(keyword))) {
-                classification = "Non-Biodegradable";
-                break;
-            }
+    // Loop through pixels and analyze color distribution
+    for (let i = 0; i < pixels.length; i += 4) {
+        const r = pixels[i];
+        const g = pixels[i + 1];
+        const b = pixels[i + 2];
+
+        if (r > 200 && g > 180 && b > 160) {
+            skinToneCount++; // Likely human skin tone
+        } else if (r > g && r > b) {
+            redCount++; // Red objects
+        } else if (g > r && g > b) {
+            greenCount++; // Green objects (likely biodegradable)
+        } else if (b > r && b > g) {
+            blueCount++; // Blue objects (non-biodegradable like plastic)
         }
+    }
 
-        // Update result text
-        resultText.innerText = classification;
-        resultText.style.color = classification === "Biodegradable" ? "green" : "red";
+    // Classification logic
+    if (skinToneCount > redCount + greenCount + blueCount) {
+        resultText.innerText = "🚫 Humans not recognized!";
+        resultText.style.color = "red";
+    } else if (greenCount > redCount && greenCount > blueCount) {
+        resultText.innerText = "♻️ Biodegradable Waste";
+        resultText.style.color = "green";
+    } else if (blueCount > redCount && blueCount > greenCount) {
+        resultText.innerText = "🚮 Non-Biodegradable Waste";
+        resultText.style.color = "blue";
     } else {
-        resultText.innerText = "Model not loaded!";
+        resultText.innerText = "⚠️ Unknown Object";
+        resultText.style.color = "orange";
     }
 });
